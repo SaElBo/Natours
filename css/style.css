@@ -232,9 +232,9 @@ body {
   -webkit-perspective: 150rem;
   perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .rotating-card__side {
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -242,7 +242,8 @@ body {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 40px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
     .rotating-card__side--front {
       background-color: #fff; }
     .rotating-card__side--back {
@@ -257,6 +258,47 @@ body {
     transform: rotateY(-180deg); }
   .rotating-card:hover .rotating-card__side--back {
     transform: rotateY(0deg); }
+  .rotating-card__picture {
+    overflow: hidden;
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .rotating-card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .rotating-card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+    .rotating-card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5443fa), url(../img/nat-7.jpg); }
+  .rotating-card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .rotating-card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .rotating-card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+  .rotating-card__details {
+    padding: 3rem; }
+    .rotating-card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .rotating-card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .rotating-card__details ul li:not(:last-child) {
+          border-bottom: 3px solid #eee; }
 
 .header {
   position: relative;
@@ -264,6 +306,7 @@ body {
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(/img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 75vh, 100% 0);
   clip-path: polygon(0 0, 0 100%, 100% 75vh, 100% 0); }
   .header__logo-box {
     position: absolute;
