@@ -137,7 +137,12 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .15; }
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .btn:link,
 .btn:visited {
@@ -356,7 +361,8 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  overflow: hidden; }
   .story > * {
     transform: skewX(12deg); }
   .story__shape {
