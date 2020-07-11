@@ -9,9 +9,18 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
     overflow: hidden;
+        @include respond(tab-port){
+           text-align: center;
+            padding: 5rem 3rem;
+            transform: skew(0);
+            background-color: rgba($color-white, .8);
+        }
 
     & > * {
         transform: skewX(12deg);
+            @include respond(tab-port){
+                transform: skew(0);
+            }
     }
 
     &__shape {
@@ -26,12 +35,27 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         overflow: hidden;
+
+            @include respond(tab-port){
+                top: 6rem;
+               left: 50%;
+               right: 50%;;
+                transform: translate(-50%,-50%) skew(0);
+                float:none;
+                margin-bottom: 2rem;
+            }
     }
     &__image {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
+            @include respond(tab-port){
+                
+                 transform: skew(0);
+                float: none;
+                margin-bottom: 2rem;
+            }
     }
 
   

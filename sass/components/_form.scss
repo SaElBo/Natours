@@ -16,9 +16,14 @@
         display: block;
         transition: border-bottom 0.3s;
 
+            @include respond(tab-port){
+                width: 100%;
+            }
+
         &::-webkit-input-placeholder {
             color: $color-gray-dark-2;
         }
+
 
         &:focus {
             outline: none;
@@ -49,6 +54,15 @@
     &__radio-group{
         
         display: inline-block;
+
+        @include respond(tab-port){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+           
+            
+        }
     }
 
     &__radio-input{
@@ -62,6 +76,10 @@
         padding-left: 4.5rem;
         &:not(:last-child){
             margin-right: 3rem;
+        }
+
+        @include respond(tab-port){
+            margin-bottom: 3rem;
         }
     }
 
